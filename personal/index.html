@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Always 💕</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-heart">♥</div>
+      <p class="loader-text">Preparing something just for you…</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ========== CURSOR EFFECT ========== -->
+  <div id="cursor-heart">♥</div>
+
+  <!-- ========== BACKGROUND MUSIC ==========
+    Place your music file at: assets/music/love.mp3
+    The toggle button (♪) in the bottom-left corner controls playback.
+  -->
+  <audio id="bg-music" loop>
+    <source src="assets/music/love.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" title="Toggle Music">♪</button>
+
+  <!-- ========== PARTICLE CANVAS (floating hearts background) ========== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="main-nav">
+    <div class="nav-logo">♥ For You</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#letter">Letter</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#timeline">Journey</a></li>
+      <li><a href="#promises">Promises</a></li>
+      <li><a href="#proposal">Proposal</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close">✕</button>
+    <a href="#hero" class="mobile-link">Home</a>
+    <a href="#letter" class="mobile-link">Letter</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#videos" class="mobile-link">Videos</a>
+    <a href="#timeline" class="mobile-link">Journey</a>
+    <a href="#promises" class="mobile-link">Promises</a>
+    <a href="#proposal" class="mobile-link">Proposal</a>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub fade-in-up delay-1">A message from my heart to yours</p>
+      <!-- Edit the main hero headline below -->
+      <h1 class="hero-title fade-in-up delay-2">
+        Every love story<br />has storms…<br />
+        <span class="hero-highlight">but I still choose you.</span>
+      </h1>
+      <p class="hero-date fade-in-up delay-3">— Always &amp; Forever —</p>
+      <a href="#letter" class="btn-glow fade-in-up delay-4">
+        <span class="btn-icon">♥</span> Open My Heart
+      </a>
+    </div>
+    <div class="hero-scroll-hint">scroll down ↓</div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — LOVE LETTER
+  ============================================================ -->
+  <section id="letter">
+    <div class="section-header">
+      <span class="section-tag">From My Soul</span>
+      <!-- Edit section title -->
+      <h2 class="section-title">A Letter I Wrote a Hundred Times</h2>
+    </div>
+
+    <div class="letter-card glass-card">
+      <div class="letter-deco top-left">❝</div>
+      <div class="letter-deco bottom-right">❞</div>
+
+      <!-- ===== EDIT THE LETTER TEXT BELOW ===== -->
+      <p class="letter-greeting">My love,</p>
+
+      <p class="letter-body">
+        I won't pretend that everything was perfect. We fought — really fought — and for a moment,
+        the silence between us felt heavier than anything I'd ever carried. I missed you in a way
+        that hurt, even when you were the reason for the hurt.
+      </p>
+
+      <p class="letter-body">
+        But here's what I learned in that one month apart: <em>I am not whole without you.</em>
+        Not because I can't survive alone — I can. But because every beautiful thing I see,
+        every song that plays, every quiet evening — they all whisper your name.
+      </p>
+
+      <p class="letter-body">
+        We fought. <span class="letter-accent">We stayed.</span><br />
+        We healed. <span class="letter-accent">We chose each other again.</span><br />
+        And that — that choosing — is the most beautiful thing we've ever done.
+      </p>
+
+      <!-- Special highlighted quote — keep this block -->
+      <div class="letter-quote-block">
+        "The most addictive fragrance was never in a bottle."
+      </div>
+
+      <p class="letter-body">
+        It was you. It has always been you. The way you laugh, the way you exist,
+        the way you make ordinary moments feel like something worth remembering forever.
+        I am addicted to <em>you</em> — to us — to this love that refuses to give up.
+      </p>
+
+      <p class="letter-body">
+        So here I am. Not perfect. Not without flaws. But completely, irrevocably yours.
+        I am choosing you today, tomorrow, and every single day after that.
+      </p>
+
+      <!-- Edit the sign-off name -->
+      <p class="letter-sign">With every piece of me,<br /><span class="letter-name">— Yours, Always 💕</span></p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — MEMORY GALLERY
+       Place your couple photos inside: assets/images/
+       Supported formats: .jpg .jpeg .png .webp
+       To add more photos: copy a gallery-item block and update the src and data-caption.
+  ============================================================ -->
+  <section id="gallery">
+    <div class="section-header">
+      <span class="section-tag">Our Memories</span>
+      <h2 class="section-title">Moments I Never Want to Forget</h2>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+
+      <div class="gallery-item reveal" data-caption="Us, always 💕">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.39 PM.jpeg" alt="Memory 1" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Us, always 💕</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="My favourite smile 🌸">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.40 PM.jpeg" alt="Memory 2" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">My favourite smile 🌸</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="This moment ✨">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.41 PM.jpeg" alt="Memory 3" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">This moment ✨</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Pure happiness 🌷">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.42 PM.jpeg" alt="Memory 4" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Pure happiness 🌷</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="I love this one 💫">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.44 PM (1).jpeg" alt="Memory 5" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">I love this one 💫</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Forever in my heart 🥀">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.44 PM (2).jpeg" alt="Memory 6" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Forever in my heart 🥀</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Every second with you 🌹">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.44 PM.jpeg" alt="Memory 7" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Every second with you 🌹</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="You make everything beautiful 🌙">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.45 PM.jpeg" alt="Memory 8" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">You make everything beautiful 🌙</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="My whole world 🌍">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.46 PM (1).jpeg" alt="Memory 9" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">My whole world 🌍</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Soft and golden ✨">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.46 PM (2).jpeg" alt="Memory 10" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Soft and golden ✨</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="This is home �">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.46 PM.jpeg" alt="Memory 11" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">This is home 🏡</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Captured in time 📸">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.47 PM (1).jpeg" alt="Memory 12" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Captured in time 📸</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="You and me 💑">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.47 PM.jpeg" alt="Memory 13" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">You and me 💑</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="A moment I keep 🌸">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.48 PM.jpeg" alt="Memory 14" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">A moment I keep 🌸</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Warmth 🌅">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.49 PM (1).jpeg" alt="Memory 15" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Warmth 🌅</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Just us, always �">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.49 PM.jpeg" alt="Memory 16" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Just us, always 💞</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="My favourite person 🌷">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.50 PM.jpeg" alt="Memory 17" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">My favourite person 🌷</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Dreamy 🌙">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.51 PM (1).jpeg" alt="Memory 18" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Dreamy 🌙</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Unfiltered love 💗">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.51 PM (2).jpeg" alt="Memory 19" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Unfiltered love 💗</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Still my favourite 🌟">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.51 PM.jpeg" alt="Memory 20" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Still my favourite 🌟</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="Worth every moment 💫">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.52 PM (1).jpeg" alt="Memory 21" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">Worth every moment 💫</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="My safe place 🛡️">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.52 PM.jpeg" alt="Memory 22" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">My safe place 🛡️</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="I choose you 💍">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.53 PM.jpeg" alt="Memory 23" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">I choose you 💍</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+      <div class="gallery-item reveal" data-caption="In every universe 🌌">
+        <img src="assets/images/WhatsApp Image 2026-05-27 at 3.00.54 PM (1).jpeg" alt="Memory 24" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-caption">In every universe 🌌</span><span class="gallery-zoom">🔍</span></div>
+      </div>
+
+    </div>
+
+    <!-- Lightbox overlay for full-screen image view -->
+    <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+      <img id="lightbox-img" src="" alt="Memory" />
+      <p id="lightbox-caption"></p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 — VIDEO MEMORIES
+       Place your video files inside: assets/videos/
+       Supported formats: .mp4 .webm
+       To add more videos: copy a video-card block and update the src.
+       Videos autoplay (muted) on hover for a cinematic preview.
+  ============================================================ -->
+  <section id="videos">
+    <div class="section-header">
+      <span class="section-tag">Moving Memories</span>
+      <h2 class="section-title">Videos That Hold Our Story</h2>
+    </div>
+
+    <div class="video-grid">
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.38 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(0)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">A Day I'll Never Forget</h3>
+          <p class="video-desc">Every second with you is a memory I treasure.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.40 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(1)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">Just Us</h3>
+          <p class="video-desc">In the simplest moments, I found my favourite place.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.42 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(2)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">Our Little World</h3>
+          <p class="video-desc">Where everything feels right.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.45 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(3)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">Moments Like These</h3>
+          <p class="video-desc">The ones I replay when I miss you most.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.47 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(4)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">Soft & Golden</h3>
+          <p class="video-desc">You make ordinary days feel like magic.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.48 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(5)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">My Favourite Laugh</h3>
+          <p class="video-desc">I could listen to this forever.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.49 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(6)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">Unscripted</h3>
+          <p class="video-desc">The real, unfiltered us — my favourite version.</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="assets/videos/WhatsApp Video 2026-05-27 at 3.00.52 PM.mp4" muted loop playsinline preload="metadata" class="video-preview"></video>
+          <div class="video-overlay">
+            <button class="video-play-btn" onclick="openVideoModal(7)" aria-label="Play video">▶</button>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">Always & Forever</h3>
+          <p class="video-desc">This is the story I want to keep telling.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Video Modal for full playback -->
+    <div id="video-modal" class="video-modal hidden" role="dialog" aria-modal="true">
+      <div class="video-modal-backdrop" onclick="closeVideoModal()"></div>
+      <button class="video-modal-prev" id="video-modal-prev" aria-label="Previous video">‹</button>
+      <button class="video-modal-next" id="video-modal-next" aria-label="Next video">›</button>
+      <div class="video-modal-content">
+        <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Close video">✕</button>
+        <video id="modal-video" controls autoplay></video>
+        <p id="video-modal-caption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 — TIMELINE
+       Edit each timeline event's title and description below.
+  ============================================================ -->
+  <section id="timeline">
+    <div class="section-header">
+      <span class="section-tag">Our Journey</span>
+      <h2 class="section-title">Every Chapter of Us</h2>
+    </div>
+
+    <div class="timeline-container">
+
+      <div class="timeline-item left reveal">
+        <div class="timeline-dot">✦</div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-icon">🌸</span>
+          <h3 class="timeline-event">The First Meeting</h3>
+          <p class="timeline-desc">
+            The universe conspired to put us in the same place at the same time.
+            I didn't know it then, but that was the beginning of everything.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal">
+        <div class="timeline-dot">✦</div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-icon">😂</span>
+          <h3 class="timeline-event">The First Laugh</h3>
+          <p class="timeline-desc">
+            You laughed and I thought — I want to hear that sound for the rest of my life.
+            That laugh became my favourite song.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal">
+        <div class="timeline-dot">✦</div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-icon">🌧️</span>
+          <h3 class="timeline-event">The First Fight</h3>
+          <p class="timeline-desc">
+            We broke. We hurt each other. And in that breaking, I realised
+            how deeply I cared — because only love can hurt that much.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal">
+        <div class="timeline-dot">✦</div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-icon">🌑</span>
+          <h3 class="timeline-event">One Month Apart</h3>
+          <p class="timeline-desc">
+            The longest, quietest, emptiest month of my life.
+            Every day without you felt like a sentence I couldn't finish.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal">
+        <div class="timeline-dot">✦</div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-icon">🌤️</span>
+          <h3 class="timeline-event">We Solved Everything</h3>
+          <p class="timeline-desc">
+            We talked. We listened. We forgave. And in that forgiveness,
+            we built something stronger than what we had before.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal">
+        <div class="timeline-dot">✦</div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-icon">💕</span>
+          <h3 class="timeline-event">Falling in Love Again</h3>
+          <p class="timeline-desc">
+            This time, it's deeper. More intentional. More real.
+            I fell in love with you all over again — and it's the best thing I've ever done.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6 — PROMISES
+       Edit each promise card's text and easter egg message (data-easter).
+       Clicking the ♥ on each card reveals the hidden easter egg message.
+  ============================================================ -->
+  <section id="promises">
+    <div class="section-header">
+      <span class="section-tag">My Vows to You</span>
+      <h2 class="section-title">Promises I Mean With Every Heartbeat</h2>
+    </div>
+
+    <div class="promises-grid">
+
+      <div class="promise-card glass-card reveal" data-easter="You are my peace 🕊️">
+        <div class="promise-icon">🌙</div>
+        <!-- Edit promise text -->
+        <p class="promise-text">"I'll stay even during the hard days."</p>
+        <span class="promise-heart" title="Click me ♥">♥</span>
+      </div>
+
+      <div class="promise-card glass-card reveal" data-easter="You are my home 🏡">
+        <div class="promise-icon">🔁</div>
+        <p class="promise-text">"I choose us again and again."</p>
+        <span class="promise-heart" title="Click me ♥">♥</span>
+      </div>
+
+      <div class="promise-card glass-card reveal" data-easter="You are my safe place 🌸">
+        <div class="promise-icon">🛡️</div>
+        <p class="promise-text">"You are my safest place."</p>
+        <span class="promise-heart" title="Click me ♥">♥</span>
+      </div>
+
+      <div class="promise-card glass-card reveal" data-easter="I see you, always 👁️">
+        <div class="promise-icon">👁️</div>
+        <p class="promise-text">"I will always see you — truly see you."</p>
+        <span class="promise-heart" title="Click me ♥">♥</span>
+      </div>
+
+      <div class="promise-card glass-card reveal" data-easter="You are enough 💫">
+        <div class="promise-icon">⭐</div>
+        <p class="promise-text">"I will remind you of your worth on the days you forget."</p>
+        <span class="promise-heart" title="Click me ♥">♥</span>
+      </div>
+
+      <div class="promise-card glass-card reveal" data-easter="Forever starts now 💍">
+        <div class="promise-icon">♾️</div>
+        <p class="promise-text">"In every version of my life, I choose you."</p>
+        <span class="promise-heart" title="Click me ♥">♥</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7 — FINAL PROPOSAL
+  ============================================================ -->
+  <section id="proposal">
+    <canvas id="proposal-canvas"></canvas>
+    <div class="proposal-content">
+      <p class="proposal-sub reveal-fade">After everything we've been through…</p>
+      <!-- Edit proposal headline -->
+      <h2 class="proposal-title reveal-fade">
+        So here I am…<br />
+        <span class="proposal-highlight">loving you again,<br />more than ever.</span>
+      </h2>
+      <p class="proposal-body reveal-fade">
+        I don't need a perfect moment. I just need you.<br />
+        Will you stay with me — through every storm, every silence, every sunrise?
+      </p>
+      <div class="proposal-buttons reveal-fade">
+        <!-- These buttons trigger the ending animation -->
+        <button class="btn-proposal yes" onclick="handleProposal('yes')">Yes, Always 💕</button>
+        <button class="btn-proposal forever" onclick="handleProposal('forever')">Forever &amp; Ever ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ENDING ANIMATION OVERLAY
+       Triggered when either proposal button is clicked.
+  ============================================================ -->
+  <div id="ending-overlay" class="hidden" role="dialog" aria-modal="true">
+    <canvas id="ending-canvas"></canvas>
+    <div class="ending-content">
+      <p class="ending-text">In every universe,</p>
+      <h1 class="ending-title">I would still find you.</h1>
+      <p class="ending-sub">💕 Always. Forever. You. 💕</p>
+      <button class="ending-close" onclick="closeEnding()">Back to Us ♥</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       REASONS I LOVE YOU POPUP
+       Edit the reasons list in script.js (search for "reasonsList")
+  ============================================================ -->
+  <div id="reasons-popup" class="popup hidden" role="dialog" aria-modal="true">
+    <div class="popup-backdrop" onclick="closeReasons()"></div>
+    <div class="popup-card glass-card">
+      <button class="popup-close" onclick="closeReasons()" aria-label="Close">✕</button>
+      <h3 class="popup-title">💕 Reasons I Love You</h3>
+      <ul class="reasons-list" id="reasons-list">
+        <!-- Populated by script.js -->
+      </ul>
+      <p class="popup-footer">…and a million more I haven't found words for yet.</p>
+    </div>
+  </div>
+
+  <!-- Floating button to open the Reasons popup -->
+  <button id="reasons-btn" title="Reasons I Love You" onclick="openReasons()" aria-label="Open reasons I love you">💕</button>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <p class="footer-text">Made with every piece of my heart, just for you.</p>
+    <p class="footer-heart">♥</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
